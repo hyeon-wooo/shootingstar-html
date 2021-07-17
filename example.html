@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/bvv8808/shootingstar-html/shootingstar.js"></script> -->
-    <script src="./shootingstar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/bvv8808/shootingstar-html/shootingstar.js"></script>
+    <!-- <script src="./shootingstar.js"></script> -->
   </head>
   <body style="background-color: #aeaeae">
     <div
@@ -33,15 +33,6 @@
 
   <script>
     const wrapper = document.querySelector("#d1");
-    const s1 = new ShootingStar(wrapper, {
-      starLength: 80,
-      minFrequency: 500,
-      starColor: "#ccccff",
-      // shootingDuration: 3000,
-    });
-    setTimeout(() => {
-      s1.hideBackgroundStars();
-    }, 2000);
-    // const s2 = new ShootingStar(document.querySelector("#d2"));
+    const s1 = new ShootingStar(wrapper);
   </script>
 </html>

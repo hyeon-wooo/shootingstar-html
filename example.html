@@ -12,14 +12,14 @@
     <div
       id="d1"
       style="
-        width: 600px;
-        height: 600px;
+        width: 400px;
+        height: 400px;
         position: relative;
         background-color: #222;
       "
     ></div>
 
-    <!-- <div
+    <div
       id="d2"
       style="
         width: 500px;
@@ -28,11 +28,14 @@
         background-color: #222;
         margin-top: 50px;
       "
-    ></div> -->
+    ></div>
   </body>
 
   <script>
     const wrapper = document.querySelector("#d1");
+    const wrapper2 = document.querySelector("#d2");
     const s1 = new ShootingStar(wrapper);
+
+    const s2 = new ShootingStar(wrapper2);
   </script>
 </html>

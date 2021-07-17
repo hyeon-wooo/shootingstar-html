@@ -1,0 +1,28 @@
+{
+  "name": "@hyeonwoo/shootingstar-html",
+  "version": "1.0.0",
+  "description": "Applying a shooting star effect to HTML elements you want",
+  "main": "shootingstar-npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvv8808/shootingstar-html.git"
+  },
+  "keywords": [
+    "shootingstar",
+    "shooting star",
+    "star",
+    "javascript star",
+    "javascript shooting star",
+    "html shooting star",
+    "html star"
+  ],
+  "author": "hyeonwoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bvv8808/shootingstar-html/issues"
+  },
+  "homepage": "https://github.com/bvv8808/shootingstar-html#readme"
+}

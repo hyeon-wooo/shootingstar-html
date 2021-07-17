@@ -16,6 +16,12 @@ That's simple. Insert a script tag in the `head` tag like below then you can app
 </head>
 ```
 
+If you use npm, you can install by the follow command.
+
+```shell
+npm i @hyeonwoo/shootingstar-html
+```
+
 ## Usage
 
 Get a element that you want to apply the shooting star effect.
@@ -32,6 +38,10 @@ Get a element that you want to apply the shooting star effect.
 ```javascript
 const nightSky = document.querySelector("#nightSky");
 const shootingStar = new ShootingStar(nightSky);
+
+// ***** If you use npm and installed this via npm, create ShootingStar object by the following code.
+import ShootingStar from "@hyeonwoo/shootingstar-html";
+const shootingStar = ShootingStar(nithgSky);
 ```
 
 ## Usage with options
@@ -47,6 +57,10 @@ const options = {
   playWhenCreated: true,
 };
 const shootingStar = new ShootingStar(nightSky, options);
+
+// ***** If you use npm and installed this via npm, create ShootingStar object by the following code.
+import ShootingStar from "@hyeonwoo/shootingstar-html";
+const shootingStar = ShootingStar(nithgSky, options);
 ```
 
 ## Options

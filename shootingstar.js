@@ -38,6 +38,15 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
     // Return some options matched to each item of list
     return param.map((a) => this.option[a]);
   };
+  this.setStarLength = (l) => {
+    if (typeof l !== "number" || isNaN(l)) {
+      console.warn(
+        "StarLength must be a number, not NaN. Check the parameter of setStarLength()"
+      );
+      return;
+    }
+    this.option.distance = l;
+  };
   this.setDistance = (d) => {
     if (typeof d !== "number" || isNaN(d)) {
       console.warn(
@@ -174,7 +183,7 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
     if (!stoped) {
       const { minFrequency } = this.option;
       const nextTiming =
-        Math.random() * (frequency - minFrequency) + minFrequency;
+        Math.random() * (frequency - minFrequency || 1) + minFrequency;
       this.timer = setTimeout(shoot, Math.floor(nextTiming));
     }
   };

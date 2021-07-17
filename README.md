@@ -113,8 +113,9 @@ console.log(s1.getCurrentOption("distance")); // --> 30
 
 #### setMinFrequency
 
-The same usage with above methods. the number of parameter is only one (the new value).
-<br>
+- The same usage with above methods. the number of parameter is only one (the new value).
+  <br>
+  <br>
 
 ### stop()
 

@@ -48,13 +48,16 @@ const shootingStar = ShootingStar(nithgSky);
 
 ```javascript
 const options = {
-  starLength: 40,
-  starColor: "#fff",
+  // default options
+  starLength: 80,
+  starColor: "#ccccff",
   distance: 120,
   shootingDuration: 600,
   frequency: 1500,
-  minFrequency: 300,
+  minFrequency: 500,
   playWhenCreated: true,
+  showBackgroundStars: true,
+  numberOfBackgroundStars: 20,
 };
 const shootingStar = new ShootingStar(nightSky, options);
 
@@ -65,15 +68,17 @@ const shootingStar = ShootingStar(nithgSky, options);
 
 ## Options
 
-| name             | type    | default | description                                                                                                                                                       |
-| ---------------- | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| starLength       | number  | 40      | How long the star's size is. `px`.                                                                                                                                |
-| starColor        | string  | "#fff"  | The color of star                                                                                                                                                 |
-| distance         | number  | 120     | How far the star moves. `px`                                                                                                                                      |
-| shootingDuration | number  | 600     | How fast the star falls down. `ms`                                                                                                                                |
-| frequency        | number  | 1500    | Stars will appear at a random timing (0 ms ~ `frequency`ms). If you want to stars that appear in the same frequency, set `minFrequency` and `frequency` the same. |
-| minFrequency     | number  | 300     | To control the timing that stars appear. `ms`                                                                                                                     |
-| playWhenCreated  | boolean | true    | When you create a ShootingStar object, the effect is automatically starts. If you don't want that, set 'false'                                                    |
+| name                    | type    | default | description                                                                                                                                                       |
+| ----------------------- | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| starLength              | number  | 40      | How long the star's size is. `px`.                                                                                                                                |
+| starColor               | string  | "#fff"  | The color of star                                                                                                                                                 |
+| distance                | number  | 120     | How far the star moves. `px`                                                                                                                                      |
+| shootingDuration        | number  | 600     | How fast the star falls down. `ms`                                                                                                                                |
+| frequency               | number  | 1500    | Stars will appear at a random timing (0 ms ~ `frequency`ms). If you want to stars that appear in the same frequency, set `minFrequency` and `frequency` the same. |
+| minFrequency            | number  | 300     | To control the timing that stars appear. `ms`                                                                                                                     |
+| playWhenCreated         | boolean | true    | When you create a ShootingStar object, the effect is automatically starts. If you don't want that, set 'false'                                                    |
+| showBackgroundStars     | boolean | true    | Render various stars when the ShootingStar object created. If you don't want to redner them, set 'false'                                                          |
+| numberOfBackgroundStars | number  | 20      | How many backgroundStars render                                                                                                                                   |
 
 ## Methods
 
@@ -127,6 +132,8 @@ console.log(s1.getCurrentOption("distance")); // --> 30
 
 #### setMinFrequency
 
+#### setNumberOfBcakgroundStars
+
 - The same usage with above methods. the number of parameter is only one (the new value).
   <br>
   <br>
@@ -138,5 +145,13 @@ To stop shooting star effect.
 ### play()
 
 To play shooting star effect.
+
+### showBackgroundStars()
+
+Show various stars on the background of the target.
+
+### hideBackgroundStars()
+
+Hide various stars on the background of the target.
 
 ## Thank you

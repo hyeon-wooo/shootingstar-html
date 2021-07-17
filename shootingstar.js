@@ -4,14 +4,16 @@ const __ss_getRandomVertex = (maxX, maxY, distanceWidth) => [
 ];
 
 const __defaultShootingStarOptions = {
-  starLength: 40,
-  starColor: "#fff",
+  starLength: 80,
+  starColor: "#ccccff",
   distance: 120,
   shootingDuration: 600,
   frequency: 1500,
-  minFrequency: 300,
+  minFrequency: 500,
   stoped: false,
   playWhenCreated: true,
+  showBackgroundStars: true,
+  numberOfBackgroundStars: 20,
 };
 
 function ShootingStar(target, options = __defaultShootingStarOptions) {
@@ -120,6 +122,24 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
     this.option.stoped = false;
     shoot();
   };
+  this.hideBackgroundStars = () => {
+    const stars = document.querySelectorAll(".backgroundStar");
+    for (const s of stars) container.removeChild(s);
+  };
+  this.showBackgroundStars = () => {
+    showBack();
+  };
+  this.setNumberOfBackgroundStars = (newNumber) => {
+    if (typeof newNumber !== number || isNaN(newNumber)) {
+      console.warn(
+        "The number of backgroundStars must be a number, not NaN. Check the parameter of setNumberOfBackgroundStars()"
+      );
+      return;
+    }
+    this.option.numberOfBackgroundStars = newNumber;
+    this.hideBackgroundStars();
+    this.showBackgroundStars();
+  };
 
   // Shooting
   const shoot = () => {
@@ -138,8 +158,13 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
 
     const star = document.createElement("div");
     star.style.width = `${starLength}px`;
-    star.style.borderTop = `2px solid ${starColor}`;
+    star.style.height = 0;
+    star.style.borderTop = `1px solid ${starColor}`;
+    star.style.opacity = 0.5;
+    star.style.backgroundColor = starColor;
+    star.style.borderRadius = "100px";
     star.style.position = "absolute";
+    star.style.boxShadow = "0px 0px 6px 2px #ffffff44";
     star.style.transform = "rotateZ(-45deg)";
 
     container.appendChild(star);
@@ -154,6 +179,7 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
       // Scaling
       {
         width: `${starLength}px`,
+        opacity: 0.8,
         right: `${initialRight}px`,
         top: `${starHalfHeight + initialTop}px`,
         offset: 0.35,
@@ -161,6 +187,8 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
       // Moving
       {
         width: `${starLength}px`,
+        height: "2px",
+        opacity: 1,
         right: `${distance + initialRight}px`,
         top: `${distance + initialTop + starHalfHeight}px`,
         offset: 0.65,
@@ -168,6 +196,8 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
       // Scaling
       {
         width: 0,
+        height: "0.5px",
+        opacity: 1,
         right: `${initialRight + distance + starLength}px`,
         top: `${starHalfHeight * 2 + initialTop + distance}px`,
         offset: 1,
@@ -190,6 +220,36 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
   };
 
   this.option.playWhenCreated && shoot();
+
+  const showBack = () => {
+    for (const i in Array.from(
+      { length: numberOfBackgroundStars },
+      (x, i) => i
+    )) {
+      const backStar = document.createElement("div");
+      backStar.className = "backgroundStar";
+      backStar.style.position = "absolute";
+      backStar.style.left = `${Math.floor(
+        Math.random() * target.clientWidth
+      )}px`;
+      backStar.style.top = `${Math.floor(
+        Math.random() * target.clientHeight
+      )}px`;
+
+      backStar.style.border = "1px solid " + this.option.starColor;
+      backStar.style.width = "0px";
+      backStar.style.height = "0px";
+
+      const opacity = Math.floor(Math.random() * 100 + 30) / 100;
+      const blur = Math.floor(opacity * 10);
+      backStar.style.boxShadow = `0px 0px ${blur}px ${blur / 5}px #f3f3f3`;
+      backStar.style.opacity = opacity;
+
+      container.appendChild(backStar);
+    }
+  };
+
+  this.option.showBackgroundStars && showBack();
 
   target.appendChild(container);
 }

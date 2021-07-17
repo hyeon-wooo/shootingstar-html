@@ -27,6 +27,8 @@ export interface IShootingStar {
   setShootingDuration: (newDuration: number) => void;
   setFrequency: (newFrequency: number) => void;
   setMinFrequency: (newMinFrequency: number) => void;
+  showBackgroundStars: () => void;
+  hideBackgroundStars: () => void;
 }
 
 export default function ShootingStar(

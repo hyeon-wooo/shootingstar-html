@@ -12,7 +12,7 @@ That's simple. Insert a script tag in the `head` tag like below then you can app
 ```html
 <head>
   ...
-  <script src="https://cdn.jsdelivr.net/gh/bvv8808/shootingstar-html/shootingstar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bvv8808/shootingstar-html@1.0.0/shootingstar.js"></script>
 </head>
 ```
 

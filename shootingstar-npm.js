@@ -21,7 +21,6 @@ export default function ShootingStar(
   options = __defaultShootingStarOptions
 ) {
   this.option = { ...__defaultShootingStarOptions, ...options };
-  console.log(this.option);
   this.timer = null;
 
   // Define Container
@@ -226,7 +225,7 @@ export default function ShootingStar(
 
   const showBack = () => {
     for (const i in Array.from(
-      { length: numberOfBackgroundStars },
+      { length: this.option.numberOfBackgroundStars },
       (x, i) => i
     )) {
       const backStar = document.createElement("div");

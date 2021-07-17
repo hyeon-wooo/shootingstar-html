@@ -51,21 +51,21 @@ const shootingStar = new ShootingStar(nightSky, options);
 
 ## Options
 
-| name             | type    | default | description                                                                                                                                                      |
-| ---------------- | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| starLength       | number  | 40      | How long the star's size is. `px`.                                                                                                                               |
-| starColor        | string  | "#fff"  | The color of star                                                                                                                                                |
-| distance         | number  | 120     | How far the star moves. `px`                                                                                                                                     |
-| shootingDuration | number  | 600     | How fast the star falls down. `ms`                                                                                                                               |
-| frequency        | number  | 1500    | Stars will appear at a random timing (0ms ~ `frequency`ms). If you want to stars that appear in the same frequency, set `minFrequency` and `frequency` the same. |
-| minFrequency     | number  | 300     | To control the timing that stars appear. `ms`                                                                                                                    |
-| playWhenCreated  | boolean | true    | When you create a ShootingStar object, the effect is automatically starts. If you don't want that, set 'false'                                                   |
+| name             | type    | default | description                                                                                                                                                       |
+| ---------------- | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| starLength       | number  | 40      | How long the star's size is. `px`.                                                                                                                                |
+| starColor        | string  | "#fff"  | The color of star                                                                                                                                                 |
+| distance         | number  | 120     | How far the star moves. `px`                                                                                                                                      |
+| shootingDuration | number  | 600     | How fast the star falls down. `ms`                                                                                                                                |
+| frequency        | number  | 1500    | Stars will appear at a random timing (0 ms ~ `frequency`ms). If you want to stars that appear in the same frequency, set `minFrequency` and `frequency` the same. |
+| minFrequency     | number  | 300     | To control the timing that stars appear. `ms`                                                                                                                     |
+| playWhenCreated  | boolean | true    | When you create a ShootingStar object, the effect is automatically starts. If you don't want that, set 'false'                                                    |
 
 ## Methods
 
 ### getCurrentOption(parameter)
 
-To get current options of a ShootingStar object.
+To get current options of a ShootingStar object.  
 `parameter`: single string or array of option keys
 
 ```javascript
@@ -76,7 +76,7 @@ console.log(s1.getCurrentOption(["starLength", "distance"])); // --> [40, 120]
 
 ### setStarLength(newStarLength)
 
-To set the length of star you want.
+To set the length of star you want.  
 `newStarLength`: only number
 
 ```javascript
@@ -87,7 +87,7 @@ console.log(s1.getCurrentOption("starLength")); // --> 30
 
 ### setStarColor(newStarColor)
 
-To set the length of star you want.
+To set the length of star you want.  
 `newStarColor`: only string. "#abcabc", "rgb(...)", "yellow"
 
 ```javascript
@@ -98,7 +98,7 @@ console.log(s1.getCurrentOption("starColor")); // --> "#f3f3f3"
 
 ### setDistance(newDistance)
 
-To set the length of star you want.
+To set the length of star you want.  
 `newDistance`: only number
 
 ```javascript
@@ -107,13 +107,14 @@ s1.setDistance(100);
 console.log(s1.getCurrentOption("distance")); // --> 30
 ```
 
-### setShootingDuration
+#### setShootingDuration
 
-### setFrequency
+#### setFrequency
 
-### setMinFrequency
+#### setMinFrequency
 
 The same usage with above methods. the number of parameter is only one (the new value).
+<br>
 
 ### stop()
 

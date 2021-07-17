@@ -15,7 +15,8 @@ const __defaultShootingStarOptions = {
 };
 
 function ShootingStar(target, options = __defaultShootingStarOptions) {
-  this.option = options;
+  this.option = { ...__defaultShootingStarOptions, ...options };
+  console.log(this.option);
   this.timer = null;
 
   // Define Container

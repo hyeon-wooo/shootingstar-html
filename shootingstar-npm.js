@@ -18,7 +18,7 @@ export default function ShootingStar(
   target,
   options = __defaultShootingStarOptions
 ) {
-  this.option = options;
+  this.option = { ...__defaultShootingStarOptions, ...options };
   this.timer = null;
 
   // Define Container

@@ -1,5 +1,7 @@
 # HTML Shooting Star Effect
 
+![example](./example.gif)
+
 <hr>
 This project offer you a function that apply effect like shooting star in the dark sky to any element you want.
 
@@ -17,8 +19,6 @@ That's simple. Insert a script tag in the `head` tag like below then you can app
 ## Usage
 
 Get a element that you want to apply the shooting star effect.
-
-![example](./example.gif)
 
 ```html
 ...

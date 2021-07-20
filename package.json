@@ -1,6 +1,6 @@
 {
   "name": "@hyeonwoo/shootingstar-html",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Applying a shooting star effect to HTML elements you want",
   "main": "shootingstar-npm.js",
   "scripts": {

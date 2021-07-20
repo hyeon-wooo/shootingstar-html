@@ -41,7 +41,11 @@ const shootingStar = new ShootingStar(nightSky);
 
 // ***** If you use npm and installed this via npm, create ShootingStar object by the following code.
 import ShootingStar from "@hyeonwoo/shootingstar-html";
-const shootingStar = ShootingStar(nithgSky);
+const shootingStar = new ShootingStar(nithgSky);
+
+// ***** If you are also use typescript
+import ShootingStar, { IShootingStar } from "@hyeonwoo/shootingstar-html";
+const shootingStar: IShootingStar = new ShootingStar(nithgSky);
 ```
 
 ## Usage with options
@@ -63,7 +67,11 @@ const shootingStar = new ShootingStar(nightSky, options);
 
 // ***** If you use npm and installed this via npm, create ShootingStar object by the following code.
 import ShootingStar from "@hyeonwoo/shootingstar-html";
-const shootingStar = ShootingStar(nithgSky, options);
+const shootingStar = new ShootingStar(nithgSky, options);
+
+// ***** If you are also use typescript
+import ShootingStar, { IShootingStar, IOptions } from "@hyeonwoo/shootingstar-html";
+const shootingStar:IShootingStar = new ShootingStar(nithgSky, {/*Your own options*/} as IOptions);
 ```
 
 ## Options

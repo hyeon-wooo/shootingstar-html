@@ -45,6 +45,7 @@ const shootingStar = new ShootingStar(nithgSky);
 
 // ***** If you are also use typescript
 import ShootingStar, { IShootingStar } from "@hyeonwoo/shootingstar-html";
+// @ts-ignore
 const shootingStar: IShootingStar = new ShootingStar(nithgSky);
 ```
 
@@ -71,6 +72,7 @@ const shootingStar = new ShootingStar(nithgSky, options);
 
 // ***** If you are also use typescript
 import ShootingStar, { IShootingStar, IOptions } from "@hyeonwoo/shootingstar-html";
+// @ts-ignore
 const shootingStar:IShootingStar = new ShootingStar(nithgSky, {/*Your own options*/} as IOptions);
 ```
 

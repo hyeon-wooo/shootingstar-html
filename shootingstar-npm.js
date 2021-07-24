@@ -132,7 +132,7 @@ export default function ShootingStar(
     showBack();
   };
   this.setNumberOfBackgroundStars = (newNumber) => {
-    if (typeof newNumber !== number || isNaN(newNumber)) {
+    if (typeof newNumber !== "number" || isNaN(newNumber)) {
       console.warn(
         "The number of backgroundStars must be a number, not NaN. Check the parameter of setNumberOfBackgroundStars()"
       );

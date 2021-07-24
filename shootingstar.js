@@ -59,13 +59,13 @@ function ShootingStar(target, options = __defaultShootingStarOptions) {
     this.option.distance = d;
   };
   this.setStarColor = (c) => {
-    if (typeof d !== "string") {
+    if (typeof c !== "string") {
       console.warn(
         "The color of star must be a string. Check the parameter of setStarColor()"
       );
       return;
     }
-    this.option.starColor = d;
+    this.option.starColor = c;
   };
   this.setFrequency = (f) => {
     if (typeof f !== "number" || isNaN(f)) {

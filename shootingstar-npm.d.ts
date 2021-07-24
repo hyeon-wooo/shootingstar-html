@@ -10,16 +10,6 @@ export interface IOptions {
 }
 
 export interface IShootingStar {
-  option: {
-    starLength: number;
-    starColor: string;
-    distance: number;
-    shootingDuration: number;
-    frequency: number;
-    minFrequency: number;
-    stoped: boolean;
-    playWhenCreated: boolean;
-  };
   getCurrentOption: (param: string | string[]) => string | string[];
   setStarLength: (newLength: number) => void;
   setStarColor: (newColor: string) => void;
@@ -31,7 +21,8 @@ export interface IShootingStar {
   hideBackgroundStars: () => void;
 }
 
-export default function ShootingStar(
-  target: Element,
-  options?: IOPtions
-): IShootingStar;
+export interface ShootingStarConstructor {
+  new (target: Element, options?: IOptions): IShootingStar;
+}
+
+export default ShootingStarConstructor;

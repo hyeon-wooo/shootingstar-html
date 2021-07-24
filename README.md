@@ -6,8 +6,8 @@
 This project offer you a function that apply effect like shooting star in the dark sky to any element you want.
 
 ## Helper
-You can also set various options on my helper page. Control any options comfortablely and just copy a code below the helper page.
-**LINK**
+You can also set various options on my helper page. Control any options comfortablely and just copy a code below the helper page.  
+**LINK**  
 https://bvv8808.github.io/shootingstar-helper/index.html
 
 
